@@ -116,6 +116,17 @@ margin: auto;
 	flex-wrap: wrap;
 }
 
+.dot {
+  height: 22px;
+  width: 22px;
+	right: 33px;
+    top: 71px;
+  background-color: #aeaeae;
+  border-radius: 50%;
+  display: inline-block;
+	position: relative;
+}
+
 header{
 background-color: rgba(0,0,0,0.0);
 	position: absolute;
@@ -2243,6 +2254,11 @@ clip-path: polygon(0% 100%,10% 97%,20% 100%,30% 97%,40% 100%,50% 97%,60% 100%,70
 
 @media(max-width: 604px){
 
+	.dot {
+	  height: 15px;
+	  width: 15px;
+		right:29px;
+	}
 
 .home .introduction{
 
