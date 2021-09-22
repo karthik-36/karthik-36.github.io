@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Karthik Singh </title>
 	<meta name="viewport" content="width=device-width , initial-scale=1, maximum-scale=1, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 
-	 <link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="animate.css">
 	<script src="script.js"></script>
-<!--	<script src="jquery-3.4.1.min.js"></script> -->
+	<!--	<script src="jquery-3.4.1.min.js"></script> -->
 	<!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
 	<script src="jquery-3.4.1.js"></script>
 	<!--<script src="http://code.jquery.com/color/jquery.color.min.js"></script>-->
@@ -18,114 +19,112 @@
 	<script src="jquery.transit.min.js"></script>
 
 	<script>
-$(document).ready(function(){
-var isOpen = false;
- $('#gform').submit(function (evt) {
-   evt.preventDefault(); //prevents the default action
-   console.log("(submit) email");
-});
+		$(document).ready(function () {
+			var isOpen = false;
+			$('#gform').submit(function (evt) {
+				evt.preventDefault(); //prevents the default action
+				console.log("(submit) email");
+			});
 
 
-$('.menu').click(function(){
-	console.log("clicked menu");
-	//$('.ul').toggleClass('active1');
-	if (isOpen == false) {
-	$('.navbar').slideDown();
-	$('#change-op').css("background-color","rgba(10,10,40,0.8)");
-	//$('.toggle').css("background", "rgba(42, 176, 227, 0.95)");
-	//$('.toggle').animate({backgroundColor : "#f6ad55"}, 500);
-	  $(".toggle").transition({"-webkit-transform" : "rotate(45deg)",backgroundColor : "#f6ad55"},300);
-	isOpen = true;
+			$('.menu').click(function () {
+				console.log("clicked menu");
+				//$('.ul').toggleClass('active1');
+				if (isOpen == false) {
+					$('.navbar').slideDown();
+					$('#change-op').css("background-color", "rgba(10,10,40,0.8)");
+					//$('.toggle').css("background", "rgba(42, 176, 227, 0.95)");
+					//$('.toggle').animate({backgroundColor : "#f6ad55"}, 500);
+					$(".toggle").transition({ "-webkit-transform": "rotate(45deg)", backgroundColor: "#f6ad55" }, 300);
+					isOpen = true;
 
-	}else{
-	$('.navbar').slideUp(30);
-	$(".toggle").transition({"-webkit-transform" : "rotate(180deg)",backgroundColor : "#2ab0e3"},300);
-    isOpen = false;
-	setTimeout(function(){ $('#change-op').css("background-color","rgba(0,0,0,0)"); }, 30);
-	//$('.toggle').animate({backgroundColor : "#2ab0e3"}, 500);
+				} else {
+					$('.navbar').slideUp(30);
+					$(".toggle").transition({ "-webkit-transform": "rotate(180deg)", backgroundColor: "#2ab0e3" }, 300);
+					isOpen = false;
+					setTimeout(function () { $('#change-op').css("background-color", "rgba(0,0,0,0)"); }, 30);
+					//$('.toggle').animate({backgroundColor : "#2ab0e3"}, 500);
 
-	}
-
-
-
-
-});
-
-$('.main-list').click(function(){
-var swidth = $(window).width();
-if(swidth<767){
-$('.navbar').slideUp(30);
-setTimeout(function(){ $('#change-op').css("background-color","rgba(0,0,0,0)"); }, 300);
-$(".toggle").transition({"-webkit-transform" : "rotate(180deg)",backgroundColor : "#2ab0e3"},300);
-}
-});
+				}
 
 
 
 
+			});
 
-$(window).resize(function(){
-  var swidth = $(window).width();
-//console.log(swidth);
-if(swidth>767){
-		console.log("more than 767");
-	//	$('.navbar').slideUp();
-    //    isOpen = false;
-		$('#change-op').css("background-color","rgba(0,0,0,8)");
-
-	$('.navbar').show();
-	}
-	else{
-		$('#change-op').css("background-color","rgba(0,0,0,0)");
-				$('.navbar').hide();
-               isOpen = false;
-	}
-
-});
+			$('.main-list').click(function () {
+				var swidth = $(window).width();
+				if (swidth < 767) {
+					$('.navbar').slideUp(30);
+					setTimeout(function () { $('#change-op').css("background-color", "rgba(0,0,0,0)"); }, 300);
+					$(".toggle").transition({ "-webkit-transform": "rotate(180deg)", backgroundColor: "#2ab0e3" }, 300);
+				}
+			});
 
 
 
 
 
+			$(window).resize(function () {
+				var swidth = $(window).width();
+				//console.log(swidth);
+				if (swidth > 767) {
+					console.log("more than 767");
+					//	$('.navbar').slideUp();
+					//    isOpen = false;
+					$('#change-op').css("background-color", "rgba(0,0,0,8)");
+
+					$('.navbar').show();
+				}
+				else {
+					$('#change-op').css("background-color", "rgba(0,0,0,0)");
+					$('.navbar').hide();
+					isOpen = false;
+				}
+
+			});
 
 
-});
-</script>
-<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
+
+
+
+
+
+		});
+	</script>
+	<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
 </head>
 
-<link rel = "icon" href =
-"kclear2.jpg"
-        type = "image/x-icon">
+<link rel="icon" href="kclear2.jpg" type="image/x-icon">
 
 <body class="body">
 
-  <div id="loading"></div>
+	<div id="loading"></div>
 
 	<!-- header -->
 
 	<header class="header" id="change-op">
 		<div class="container">
 			<div class="row">
-			<div class="brand-name" style="font-size: 35px">
+				<div class="brand-name" style="font-size: 35px">
 
-				<a href="" class="logo">karthik</a>
+					<a href="" class="logo">karthik</a>
 
+				</div>
+				<div class="ham-burger">
+
+				</div>
+				<div class="toggle">
+					<i class="fa fa-bars menu" aria-hidden="true"></i>
+				</div>
+
+				<!-- rm-->
 			</div>
-			<div class="ham-burger">
-
-			</div>
-			<div class="toggle">
-				<i class="fa fa-bars menu" aria-hidden="true" ></i>
-			 </div>
-
-<!-- rm-->
-</div>
 
 			<div class="navbar" id="navbarID">
 
 				<ul class="main-list">
-				    <li><a href="#home" class="active">Home</a></li>
+					<li><a href="#home" class="active">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#skills">Skills</a></li>
 					<li><a href="#projects">Projects</a></li>
@@ -139,25 +138,26 @@ if(swidth>767){
 
 	</header>
 
-<!-- header end -->
+	<!-- header end -->
 
 
-<!-- start home -->
-<section class="home" id="home">
-<div class="vid-class" style="position: relative; text-align: center;">
-<div class="introduction">
-	<div class="block">
-				<h6>Hi, I'm</h6>
-				<h1 class="">Karthik Singh</h1>
-				<h3>Application developer</h3>
-				<div class="cv-btn">
-					<a href="https://drive.google.com/file/d/15CJ1D7wmWlzgWYcCavkRKjJ_1gKJyD7x/view?usp=sharing" target="_blank" download>Download CV</a>
+	<!-- start home -->
+	<section class="home" id="home">
+		<div class="vid-class" style="position: relative; text-align: center;">
+			<div class="introduction">
+				<div class="block">
+					<h6>Hi, I'm</h6>
+					<h1 class="">Karthik Singh</h1>
+					<h3>Application developer</h3>
+					<div class="cv-btn">
+						<a href="https://drive.google.com/file/d/15CJ1D7wmWlzgWYcCavkRKjJ_1gKJyD7x/view?usp=sharing"
+							target="_blank" download>Download CV</a>
+					</div>
 				</div>
+
+
 			</div>
-
-
-</div>
-<!--
+			<!--
 
 <div class="mobile-block" style="position: absolute; color: #ffffff; bottom: 0; padding-bottom: 20px; padding-left: 15px; border-left: 3px solid #ffffff; margin-left: 15px; margin-bottom: 30px; padding-top: 5px">
 	<h6 style="font-size: 20px; margin-bottom: 0; margin-top: 0;">Hii, this is </h6>
@@ -169,17 +169,18 @@ if(swidth>767){
 	</div>
 -->
 
-<video class="video"  id="video"  align="center" id="bgvideo" loop  autoplay="autoplay"  autoplay loop muted preload="auto" poster="poster3.jpg" style="">
-  <source id="videosource" src="n.mp4" type="video/mp4"/>
+			<video class="video" id="video" align="center" id="bgvideo" loop autoplay="autoplay" autoplay loop muted
+				preload="auto" poster="poster3.jpg" style="">
+				<source id="videosource" src="n.mp4" type="video/mp4" />
 
-</video>
-
-
-<div class="mobile-intro" style="position: relative;">
+			</video>
 
 
-</div>
-<!--
+			<div class="mobile-intro" style="position: relative;">
+
+
+			</div>
+			<!--
 		<div class="container">
 
 
@@ -197,93 +198,100 @@ if(swidth>767){
 			</div>
 		</div>
 		-->
-	</div>
+		</div>
 	</section>
-<!-- end home -->
+	<!-- end home -->
 
-<!-- about section start -->
+	<!-- about section start -->
 
-<section class="about-me" id="about">
-	<div class="container">
-		<div class="row">
-			<div class="section-title">
-				<h1 class="wow bounceIn" >About Me</h1>
-				<p class="small text-uppercase"></p>
+	<section class="about-me" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<h1 class="wow bounceIn">About Me</h1>
+					<p class="small text-uppercase"></p>
 
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="about-content">
-				<div class="row">
-				<div class="img">
-					<img src="images/about-me.jpg" alt="about-me">
-				</div>
-				<div class="text">
-					<h4>Who am I?</h4>
-					<h6>- An <span> Application Developer </span> based in <span>Chicago, USA</span> </h6>
-					<p class="top-space">Currently pursuing masters of CS at University of Illinois at Chicago. I am also a Computer Science Engineer with a work experience of 3 &frac12; years aspiring to build web applications of tomorrow. I have knowledge in a vast variety of technologies and can develop applications for various platforms. My best area would be rapid prototyping, building mobile applications and backend services.</p>
-					<div class="info">
-					<div class="list">
-					  <label>Birthday:</label>
-					  <p>30th january 1996</p>
-					 </div>
-					 <div class="list">
-					   <label>Email:</label>
-					   <p> karthik2singh@gmail.com</p>
-					</div>
-					 <div class="list">
-					   <label>Age:</label>
-					   <p> 25 Yr</p>
-					</div>
-					<div class="list">
-					   <label>Phone</label>
-					   <p> 3129004175</p>
-					</div>
-					<div class="list">
-					   <label>Residence:</label>
-					   <p> USA</p>
-					</div>
-					<div class="list">
-					   <label>Address:</label>
-					  <p>914 south miller st</p>
-					</div>
-					<div class="list">
-					   <label>Freelance:</label>
-					  <p>Unavailable</p>
-					</div>
-
-					</div>
-
-
-					<div class="social-links">
-						<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i class="fa fa-linkedin"></i></a>
-						<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
-						<a href="https://leetcode.com/karthiksingh/" target="_blank"><i class="fa fa-leetcode"><span class="iconify" data-icon="simple-icons:leetcode" data-inline="false"></span></i></a>
-
-					<!--	<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a> -->
-
-					</div>
-
-
-				  </div>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="about-content">
+					<div class="row">
+						<div class="img">
+							<img src="images/about-me.jpg" alt="about-me">
+						</div>
+						<div class="text">
+							<h4>Who am I?</h4>
+							<h6>- An <span> Application Developer </span> based in <span>Chicago, USA</span> </h6>
+							<p class="top-space">Currently pursuing masters of CS at University of Illinois at Chicago.
+								I am also a Computer Science Engineer with a work experience of 3 &frac12; years
+								aspiring to build web applications of tomorrow. I have knowledge in a vast variety of
+								technologies and can develop applications for various platforms. My best area would be
+								rapid prototyping, building mobile applications and backend services.</p>
+							<div class="info">
+								<div class="list">
+									<label>Birthday:</label>
+									<p>30th january 1996</p>
+								</div>
+								<div class="list">
+									<label>Email:</label>
+									<p>ksingh49@uic.edu</p>
+								</div>
+								<div class="list">
+									<label>Age:</label>
+									<p> 25 Yr</p>
+								</div>
+								<div class="list">
+									<label>Phone</label>
+									<p> 3129004175</p>
+								</div>
+								<div class="list">
+									<label>Residence:</label>
+									<p> USA</p>
+								</div>
+								<div class="list">
+									<label>Address:</label>
+									<p>914 South Miller St</p>
+								</div>
+								<div class="list">
+									<label>Freelance:</label>
+									<p>Unavailable</p>
+								</div>
+
+							</div>
+
+
+							<div class="social-links">
+								<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i
+										class="fa fa-linkedin"></i></a>
+								<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://leetcode.com/karthiksingh/" target="_blank"><i
+										class="fa fa-leetcode"><span class="iconify" data-icon="simple-icons:leetcode"
+											data-inline="false"></span></i></a>
+
+								<!--	<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a> -->
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
-
-	</div>
-</section>
+	</section>
 
 
-<!-- about section end-->
+	<!-- about section end-->
 
 
-<!-- start skills -->
-<section class="skills" id="skills">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="skills-content">
-				<div class="row">
+	<!-- start skills -->
+	<section class="skills" id="skills">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="skills-content">
+					<div class="row">
 
 
 
@@ -292,380 +300,382 @@ if(swidth>767){
 
 
 
-					<div class="section-title">
-						<h1>PROFESSIONAL SKILLS</h1>
-						<p style="font-size: 22; font-weight: 600"></p>
+						<div class="section-title">
+							<h1>PROFESSIONAL SKILLS</h1>
+							<p style="font-size: 22; font-weight: 600"></p>
+						</div>
 					</div>
-				</div>
-				<div class="row">
+					<div class="row">
 
 
-				<div class="web">
-					<h2>Web</h2>
+						<div class="web">
+							<h2>Web</h2>
 
 
 
-<div class="flex-skill-img">
+							<div class="flex-skill-img">
 
-			<div class="skill-logo">
-				<img src="skill-icons/htmlcss.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>HTML5/CSS</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
-
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/htmlcss.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>HTML5/CSS</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-
-
-<div class="flex-skill-img">
-
-			<div class="skill-logo">
-				<img src="skill-icons/reactjs.png" height="60px">
-					</div>
-					<div class="skill-box">
-											<h6>ReactJs</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 60%">
-
-									<span style="    position: absolute; right: 40%; top: -29px;">60%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
+							</div>
 
 
 
 
+							<div class="flex-skill-img">
 
-<div class="flex-skill-img">
-
-			<div class="skill-logo">
-				<img src="skill-icons/node.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>NodeJs/Express/SQL/MongoDB</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 90%">
-
-									<span style="    position: absolute; right: 10%; top: -29px;">90%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/reactjs.png" height="60px">
 								</div>
+								<div class="skill-box">
+									<h6>ReactJs</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 60%">
+
+											<span style="    position: absolute; right: 40%; top: -29px;">60%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-
-				<img id="img1" class="wow bounceIn" src="images/web.jpg" alt="skill" style=" width: 100%;">
-
-				</div>
-
-
-
-
-				<div class="languages">
-					<h2>Languages</h2>
-
-
-
-
-
-
-<div class="flex-skill-img">
-
-			<div class="skill-logo">
-				<img src="skill-icons/javascript.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>Javascript</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 80%">
-
-									<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
+							</div>
 
 
 
 
-<div class="flex-skill-img">
 
-			<div class="skill-logo">
-				<img src="skill-icons/c++.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>C++</h6>
+							<div class="flex-skill-img">
 
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
-
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/node.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>NodeJs/Express/SQL/MongoDB</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 90%">
+
+											<span style="    position: absolute; right: 10%; top: -29px;">90%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-
-
-<div class="flex-skill-img">
-
-			<div class="skill-logo">
-				<img src="skill-icons/csharp.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>C#</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 60%">
-
-									<span style="position: absolute; right: 40%; top: -29px;">60%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
+							</div>
 
 
 
+							<img id="img1" class="wow bounceIn" src="images/web.jpg" alt="skill" style=" width: 100%;">
+
+						</div>
 
 
-<div class="flex-skill-img">
 
-			<div class="skill-logo">
-				<img src="skill-icons/python.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>Python</h6>
 
-							<div class="progress">
-								<div class="fill a" style="width: 60%">
+						<div class="languages">
+							<h2>Languages</h2>
 
-									<span style="    position: absolute; right: 40%; top: -29px;">60%</span>
-								 </div>
+
+
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/javascript.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>Javascript</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 80%">
+
+											<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-
-
-
-
-<div class="flex-skill-img">
-
-			<div class="skill-logo">
-				<img src="skill-icons/java.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>Java</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
-
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
-
-
-					<img id="img2" class="wow bounceIn" src="images/skill.jpg" alt="skill" style="width: 100%;">
-				</div>
+							</div>
 
 
 
 
-				<div class="design">
-					<h2>Design</h2>
+							<div class="flex-skill-img">
 
-
-
-
-
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/photoshop.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>PhotoShop</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
-
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/c++.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>C++</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-
-
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/ae.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>AfterEffects</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
-
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
+							</div>
 
 
 
 
+							<div class="flex-skill-img">
 
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/max.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>3DS MAX</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 75%">
-
-									<span style="    position: absolute; right: 25%; top: -29px;">75%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/csharp.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>C#</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 60%">
+
+											<span style="position: absolute; right: 40%; top: -29px;">60%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-				<img id="img3" class="wow bounceIn" src="images/design.jpg" alt="skill" style="width: 100%;">
-
-				 </div>
-
-				<div class="cloud">
-					<h2>Cloud</h2>
-
-
-
-
-
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/ibm.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>IBM Cloud</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 80%">
-
-									<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
+							</div>
 
 
 
-<div class="flex-skill-img">
 
-					<div class="skill-logo">
-					<img src="skill-icons/heroku.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>Heroku</h6>
 
-							<div class="progress">
-								<div class="fill a" style="width: 80%">
+							<div class="flex-skill-img">
 
-									<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
-								 </div>
+								<div class="skill-logo">
+									<img src="skill-icons/python.png" height="50px">
 								</div>
+								<div class="skill-box">
+									<h6>Python</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 60%">
+
+											<span style="    position: absolute; right: 40%; top: -29px;">60%</span>
+										</div>
+									</div>
 
 
-					</div>
-	</div>
-
-
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/aws.png" height="50px">
-					</div>
-					<div class="skill-box">
-											<h6>AWS</h6>
-
-							<div class="progress">
-								<div class="fill a" style="width: 50%">
-
-									<span style="    position: absolute; right: 50%; top: -29px;">50%</span>
-								 </div>
 								</div>
-
-
-					</div>
-	</div>
-
-
-				<img id="img4" class="wow bounceIn" src="images/cloud.jpg" alt="skill" style=" width: 100%;">
-				</div>
+							</div>
 
 
 
 
 
 
-				<div class="tool">
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/java.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>Java</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+							<img id="img2" class="wow bounceIn" src="images/skill.jpg" alt="skill" style="width: 100%;">
+						</div>
+
+
+
+
+						<div class="design">
+							<h2>Design</h2>
+
+
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/photoshop.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>PhotoShop</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/ae.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>AfterEffects</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/max.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>3DS MAX</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 75%">
+
+											<span style="    position: absolute; right: 25%; top: -29px;">75%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+							<img id="img3" class="wow bounceIn" src="images/design.jpg" alt="skill"
+								style="width: 100%;">
+
+						</div>
+
+						<div class="cloud">
+							<h2>Cloud</h2>
+
+
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/ibm.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>IBM Cloud</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 80%">
+
+											<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/heroku.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>Heroku</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 80%">
+
+											<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/aws.png" height="50px">
+								</div>
+								<div class="skill-box">
+									<h6>AWS</h6>
+
+									<div class="progress">
+										<div class="fill a" style="width: 50%">
+
+											<span style="    position: absolute; right: 50%; top: -29px;">50%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+							<img id="img4" class="wow bounceIn" src="images/cloud.jpg" alt="skill"
+								style=" width: 100%;">
+						</div>
 
 
 
 
 
 
-					<h2>Tools/Engines</h2>
+						<div class="tool">
 
 
-<!--
+
+
+
+
+							<h2>Tools/Engines</h2>
+
+
+							<!--
 <div class="flex-skill-img">
 
 					<div class="skill-logo">
@@ -719,315 +729,421 @@ if(swidth>767){
 
 -->
 
-<!-- exp -->
+							<!-- exp -->
 
 
 
 
 
 
-<div class="flex-skill-img">
+							<div class="flex-skill-img">
 
-					<div class="skill-logo">
-					<img src="skill-icons/android.png" height="50px">
+								<div class="skill-logo">
+									<img src="skill-icons/android.png" height="50px">
+								</div>
+								<div class="skill-box">
+
+
+
+									<h6>Android Studio</h6>
+									<!--	<h6 style=" right : 20%;text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">80%</h6> -->
+									<!--		<h6 style="text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">70%</h6> -->
+
+
+									<div class="progress">
+										<div class="fill a" style="width: 70%">
+
+											<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+							<div class="flex-skill-img">
+
+								<div class="skill-logo">
+									<img src="skill-icons/unity.png" height="50px">
+								</div>
+								<div class="skill-box">
+
+
+
+									<h6>Unity</h6>
+									<!--	<h6 style=" right : 20%;text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">80%</h6> -->
+									<!--		<h6 style="text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">70%</h6> -->
+
+
+									<div class="progress">
+										<div class="fill a" style="width: 80%">
+
+											<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+
+
+
+
+
+
+
+
+
+						</div>
+
+
+
+
+
+
+
+
+
+
+
 					</div>
-					<div class="skill-box">
+				</div>
+
+				<div class="img" id="skill-image">
+					<img id="top-skill-img" class="wow bounceInRight" src="images/web.jpg" alt="skill"
+						style="height: 300px; width: 100%;">
+					<img class="wow bounceInRight" src="images/skill.jpg" alt="skill"
+						style="height: 300px; width: 100%;">
+					<img class="wow bounceInRight" src="images/design.jpg" alt="skill" style="">
+					<img class="wow bounceInRight" src="images/cloud.jpg" alt="skill" style="">
+					<img id="bottom-skill-img" class="wow bounceInRight" src="images/tools.jpg" alt="skill" style="">
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- end skills -->
 
 
 
-						<h6>Android Studio</h6>
-					<!--	<h6 style=" right : 20%;text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">80%</h6> -->
-			<!--		<h6 style="text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">70%</h6> -->
 
 
-							<div class="progress">
-								<div class="fill a" style="width: 70%">
+	<!-- Project section-->
+	<section class="projects" id="projects">
+		<div class="projects">
+			<div class="section-title">
 
-									<span style="    position: absolute; right: 30%; top: -29px;">70%</span>
-								 </div>
+
+
+
+				<div class="project-gear-flex">
+
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px"
+						height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+						<g transform="translate(50 50)">
+							<g transform="rotate(29.4442)">
+								<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1"
+									dur="0.3s" repeatCount="indefinite"></animateTransform>
+								<path
+									d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18"
+									fill="#e15b64"></path>
+							</g>
+						</g>
+						<!-- [ldio] generated by https://loading.io/ -->
+					</svg>
+
+					<h1>MY PROJECTS</h1>
+
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px"
+						height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+						<g transform="translate(50 50)">
+							<g transform="rotate(29.4442)">
+								<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1"
+									dur="0.3s" repeatCount="indefinite"></animateTransform>
+								<path
+									d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18"
+									fill="#e15b64"></path>
+							</g>
+						</g>
+						<!-- [ldio] generated by https://loading.io/ -->
+					</svg>
+
+				</div>
+				<p>Here are a few projects I made during my college days.</p>
+			</div>
+			<div class="videos">
+
+
+				<div class="project0">
+					<div class="project-details">
+						<h1 class="project-title">Wings out!</h1>
+						<p>A fighter plane Mobile game made with unity</p>
+					</div>
+
+
+					<div class="vid-and-detail">
+
+
+						<div class="video-flex">
+							<iframe id="p1" width="1280" height="490"
+								src="https://www.youtube.com/embed/FDNh4Z6AEBc?start=3" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+						</div>
+
+						<!-- main below -->
+						<div class="entire-project-detail  wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">40 days</span></h4>
 								</div>
 
-
-					</div>
-	</div>
-
-
-
-<div class="flex-skill-img">
-
-					<div class="skill-logo">
-					<img src="skill-icons/unity.png" height="50px">
-					</div>
-					<div class="skill-box">
-
-
-
-						<h6>Unity</h6>
-					<!--	<h6 style=" right : 20%;text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">80%</h6> -->
-			<!--		<h6 style="text-shadow: 1px 1px rgba(0,0,0,0.3); color: #999999">70%</h6> -->
-
-
-							<div class="progress">
-								<div class="fill a" style="width: 80%">
-
-									<span style="    position: absolute; right: 20%; top: -29px;">80%</span>
-								 </div>
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
 								</div>
-
+							</div>
+							<div>
+								<p>Wings out was one of my first big projects in
+									unity. It is a fighter plane game
+									where you had to make your way through the
+									terrain all while dodging cannon balls and
+									seeking missiles that you could shoot out
+									of the sky if you were quick enough.</p>
+								<p> I later
+									on added facebook authentication along with AWS
+									Cognito services so that the player could save their checkpoints
+									and resume playing from any mobile device when they log in.
+								</p>
+							</div>
+						</div>
+						<!-- main above -->
 
 					</div>
-	</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
 
 
 
 				</div>
-			</div>
 
-			<div class="img" id="skill-image">
-				<img id="top-skill-img" class="wow bounceInRight" src="images/web.jpg" alt="skill" style="height: 300px; width: 100%;">
-				<img class="wow bounceInRight" src="images/skill.jpg" alt="skill" style="height: 300px; width: 100%;">
-				<img class="wow bounceInRight" src="images/design.jpg" alt="skill" style="">
-				<img class="wow bounceInRight" src="images/cloud.jpg" alt="skill" style="">
-				<img id="bottom-skill-img" class="wow bounceInRight" src="images/tools.jpg" alt="skill" style="">
-			</div>
 
-		</div>
 
-	</div>
 
-</section>
-<!-- end skills -->
+				<!-- video 2 -->
 
 
+				<div class="project1">
+					<div class="project-details">
+						<h1 class="project-title">RUBBER BAND OF DOOM</h1>
+						<p>hooked up a pen refill with a rubber band and several servo motors. This was the result.</p>
+					</div>
 
 
+					<div class="vid-and-detail">
 
-<!-- Project section-->
-<section class="projects" id="projects">
-<div class="projects">
-	<div class="section-title">
 
+						<!-- main below -->
 
 
+						<div class="entire-project-detail  wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">10 days</span></h4>
+								</div>
 
-<div class="project-gear-flex">
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div>
+								<p>
+									I decided to build this fun little bot when I was exploring Arduino and its
+									capabilities.
+									There are 2 modes in which this turret works. </p>
+								<p> 1) The manual operation took input from my web page where it had options to turn
+									left, right, up, down, and SHOOT.
+								</p>
+								<p>
+									2) In Automatic mode, the turret along with an ultrasonic sensor keeps sweeping 0 to
+									180 deg.
+									If an object is detected in front of the turret and it stays there for 2 seconds
+									then the turret would shoot in that direction.
+								</p>
+							</div>
+						</div>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px" height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-<g transform="translate(50 50)">
-<g transform="rotate(29.4442)">
-<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1" dur="0.3s" repeatCount="indefinite"></animateTransform><path d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18" fill="#e15b64"></path></g></g>
-<!-- [ldio] generated by https://loading.io/ --></svg>
 
-		<h1>MY PROJECTS</h1>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px" height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-<g transform="translate(50 50)">
-<g transform="rotate(29.4442)">
-<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1" dur="0.3s" repeatCount="indefinite"></animateTransform><path d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18" fill="#e15b64"></path></g></g>
-<!-- [ldio] generated by https://loading.io/ --></svg>
 
-</div>
-		<p>Here are a few projects I made during my college days.</p>
-	</div>
-	<div class="videos">
+						<!-- main above -->
 
+						<div class="video-flex">
+							<iframe id="p2" width="1280" height="490"
+								src="https://www.youtube.com/embed/53v_kKcumQg?start=26" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+						</div>
 
-<div class="project0">
-	<div class="project-details">
-	<h1 class="project-title">Wings out!</h1>
-	<p>A fighter plane Mobile game made with unity</p>
-	</div>
+					</div>
+				</div>
 
 
-<div class="vid-and-detail">
 
 
-	<div class="video-flex">
-	<iframe id="p1"  width="1280" height="490" src="https://www.youtube.com/embed/FDNh4Z6AEBc?start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
-	</div>
 
-	<!-- main below -->
-<div class="entire-project-detail  wow slideInUp">
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">40 days</span></h4>
-	</div>
+				<!-- video 3 -->
 
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>Wings out was one of my first big projects in
-unity. It is a fighter plane game
-where you had to make your way through the
-terrain all while dodging cannon balls and
-seeking missiles that you could shoot out
-of the sky if you were quick enough.</p>
-<p> I later
-on added facebook authentication along with AWS
-Cognito services so that the player could save their checkpoints
-and resume playing from any mobile device when they log in.
-</p>
-</div>
-</div>
-<!-- main above -->
 
-</div>
+				<div class="project2">
+					<div class="project-details">
+						<h1 class="project-title">Object Tracking and Following Drone</h1>
+						<p>A Drone that detects an object by its color and tries to track and follow it.</p>
+					</div>
 
 
+					<div class="vid-and-detail">
 
-</div>
 
+						<div class="video-flex">
+							<iframe id="p3" width="1280" height="490" src="https://www.youtube.com/embed/gCUX1YJzl84"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope"
+								allowfullscreen></iframe>
+						</div>
 
+						<!-- main below -->
+						<div class="entire-project-detail  wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">30 days</span></h4>
+								</div>
 
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div>
+								<p>
 
-<!-- video 2 -->
 
+									Using Raspberry pi and pixhawk flight controller my team and I built this
+									object tracking and following drone.
+									We first tried YOLO for detecting specific objects and a drone simulator was used
+									before testing out in a real-time environment, our simulated tests successful. But
+									due to its complex nature and
+									heavy computation, our raspberry pi was giving us super low frame rates in the real
+									environment.
+									So we went with a different approach :
+								<p>
+									To construct a mask for the color black (hence I am wearing a black shirt), then
+									perform
+									a series of dilations and erosions to remove any small
+									blobs left in the mask so that the drone could track and follow me.
+								</p>
 
-<div class="project1">
-	<div class="project-details">
-	<h1 class="project-title">RUBBER BAND OF DOOM</h1>
-	<p>hooked up a pen refill with a rubber band and several servo motors. This was the result.</p>
-	</div>
 
+								</p>
+							</div>
+						</div>
+						<!-- main above -->
 
-<div class="vid-and-detail">
 
+					</div>
 
-	<!-- main below -->
 
+				</div>
 
-<div class="entire-project-detail  wow slideInUp">
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">10 days</span></h4>
-	</div>
 
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star "></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>
-	I decided to build this fun little bot when I was exploring Arduino and its capabilities.
-	There are 2 modes in which this turret works. </p>
-<p>	1) The manual operation took input from my web page where it had options to turn
-	left, right, up, down, and SHOOT.
-</p>
-<p>
- 2) In Automatic mode, the turret along with an ultrasonic sensor keeps sweeping 0 to 180 deg.
- If an object is detected in front of the turret and it stays there for 2 seconds then the turret would shoot in that direction.
-</p>
-</div>
-</div>
 
 
 
 
-<!-- main above -->
 
-<div class="video-flex">
-	<iframe id="p2"  width="1280" height="490" src="https://www.youtube.com/embed/53v_kKcumQg?start=26" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-	</div>
 
-</div>
-</div>
 
 
 
 
 
-<!-- video 3 -->
+				<!-- vide 4-->
 
+				<div class="project3">
+					<div class="project-details">
+						<h1 class="project-title">VR Dreamworld</h1>
+						<p>An exploring open-world game made for Virtual reality</p>
+					</div>
 
-<div class="project2">
-	<div class="project-details">
-	<h1 class="project-title">Object Tracking and Following Drone</h1>
-	<p>A Drone that detects an object by its color and tries to track and follow it.</p>
-	</div>
 
+					<div class="vid-and-detail">
 
-<div class="vid-and-detail">
 
+						<!-- main below -->
+						<div class="entire-project-detail  wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">7 days</span></h4>
+								</div>
 
-	<div class="video-flex">
-	<iframe id="p3"  width="1280" height="490" src="https://www.youtube.com/embed/gCUX1YJzl84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-	</div>
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star "></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div>
+								<p>
+									Here is another Unity project, this time made for virtual reality by using Google VR
+									SDK.
+									I created an open world consisting of a beautiful landscape and a castle in the
+									middle, all for you to explore.
+								</p>
+								<p>The controls were simple. To move forward you simply had to look a bit below head
+									level and a bit above head level if you wanted to stop and
+									look around.
 
-	<!-- main below -->
-<div class="entire-project-detail  wow slideInUp">
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">30 days</span></h4>
-	</div>
+								</p>
+							</div>
+						</div>
 
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>
 
 
-Using Raspberry pi and pixhawk flight controller my team and I built this
-object tracking and following drone.
-We first tried YOLO for detecting specific objects and a drone simulator was used before testing out in a real-time environment, our simulated tests successful. But due to its complex nature and
-heavy computation, our raspberry pi was giving us super low frame rates in the real environment.
-So we went with a different approach :
-<p>
-To construct a mask for the color black (hence I am wearing a black shirt), then perform
-a series of dilations and erosions to remove any small
-blobs left in the mask so that the drone could track and follow me.
-	    </p>
 
+						<!-- main above -->
 
-</p>
-</div>
-</div>
-<!-- main above -->
+						<div class="video-flex">
+							<iframe id="p4" width="1280" height="490" src="https://www.youtube.com/embed/VwKi3hA2sug"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope"
+								allowfullscreen></iframe>
+						</div>
 
+					</div>
+				</div>
 
-</div>
 
 
-</div>
 
 
 
@@ -1040,58 +1156,63 @@ blobs left in the mask so that the drone could track and follow me.
 
 
 
+				<!-- vide 5 -->
 
-<!-- vide 4-->
 
-<div class="project3">
-	<div class="project-details">
-	<h1 class="project-title">VR Dreamworld</h1>
-	<p>An exploring open-world game made for Virtual reality</p>
-	</div>
+				<div class="project4">
+					<div class="project-details">
+						<h1 class="project-title">Virtual plane control</h1>
+						<p>Simulating plane movement with gyroscope attached to my glove</p>
+					</div>
 
 
-<div class="vid-and-detail">
+					<div class="vid-and-detail">
 
 
-	<!-- main below -->
-<div class="entire-project-detail  wow slideInUp">
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">7 days</span></h4>
-	</div>
+						<div class="video-flex">
+							<iframe id="p5" width="1280" height="495"
+								src="https://www.youtube.com/embed/J7Fc_RNvi-Y?start=4" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+						</div>
 
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star "></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>
-	Here is another Unity project, this time made for virtual reality by using Google VR SDK.
-	I created an open world consisting of a beautiful landscape and a castle in the middle, all for you to explore.
-	</p>  <p>The controls were simple. To move forward you simply had to look a bit below head level and a bit above head level if you wanted to stop and
-	look around.
+						<!-- main below -->
+						<div class="entire-project-detail  wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">1 day</span></h4>
+								</div>
 
-</p>
-</div>
-</div>
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div>
+								<p>
+									A simple Arduino based project where a model of the plane made with OpenGL
+									responds to the movements made by my hand.
+								<p>
+									There are 3 axes of movement ie yaw, pitch, and roll. The gyroscope attached to my
+									glove sends
+									this data to the computer and the model plane responds accordingly.
+								</p>
+								</p>
+							</div>
+						</div>
+						<!-- main above -->
 
 
+					</div>
 
+				</div>
 
-<!-- main above -->
 
-<div class="video-flex">
-	<iframe id="p4"   width="1280" height="490" src="https://www.youtube.com/embed/VwKi3hA2sug" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-	</div>
 
-</div>
-</div>
 
 
 
@@ -1102,288 +1223,294 @@ blobs left in the mask so that the drone could track and follow me.
 
 
 
+				<!-- vide 6 -->
 
+				<div class="project3">
+					<div class="project-details">
+						<h1 class="project-title">Waypoint following Drone</h1>
+						<p>A drone that navigates to positions by using GPS</p>
+					</div>
 
 
+					<div class="vid-and-detail">
 
 
-<!-- vide 5 -->
+						<!-- main below -->
+						<div class="entire-project-detail wow slideInUp">
+							<div class="du-co">
+								<div>
+									<h4>Duration</h4>
+									<h4><span style="color: #484848">10 days</span></h4>
+								</div>
 
+								<div class="complexity">
+									<h4>Complexity</h4>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div>
+								<p>
+									A predecessor project to object tracking and following drone.
+									I was trying to learn how to use DroneKit Python API with Raspberry Pi and
+									PixHawk flight controller and ended up making this project.
+								</p>
+								<p>
+									We used the Ublox NEO 7M GPS module to get our drone's precise location.
+									By taking our custom GPS coordinates and passing these location coordinates into our
+									code we were able to make
+									our drone navigate through all set checkpoints safely.
 
-<div class="project4">
-	<div class="project-details">
-	<h1 class="project-title">Virtual plane control</h1>
-	<p>Simulating plane movement with gyroscope attached to my glove</p>
-	</div>
+								</p>
+							</div>
+						</div>
 
 
-<div class="vid-and-detail">
 
 
-	<div class="video-flex">
-	<iframe id="p5"  width="1280" height="495" src="https://www.youtube.com/embed/J7Fc_RNvi-Y?start=4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-	</div>
+						<!-- main above -->
 
-	<!-- main below -->
-<div class="entire-project-detail  wow slideInUp">
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">1 day</span></h4>
-	</div>
+						<div class="video-flex">
+							<iframe id="p6" width="1280" height="620"
+								src="https://www.youtube.com/embed/fNhwsm97YNk?start=2" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+						</div>
 
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>
-A simple Arduino based project where a model of the plane made with OpenGL
-responds to the movements made by my hand.
-<p>
-There are 3 axes of movement ie yaw, pitch, and roll. The gyroscope attached to my glove sends
-this data to the computer and the model plane responds accordingly.
-</p>
-</p>
-</div>
-</div>
-<!-- main above -->
+					</div>
+				</div>
 
 
-</div>
 
-</div>
 
 
 
 
 
 
+				<!-- last video end -->
 
 
 
-
-
-
-
-<!-- vide 6 -->
-
-	<div class="project3">
-	<div class="project-details">
-	<h1 class="project-title">Waypoint following Drone</h1>
-	<p>A drone that navigates to positions by using GPS</p>
-	</div>
-
-
-<div class="vid-and-detail">
-
-
-	<!-- main below -->
-<div class="entire-project-detail wow slideInUp" >
-<div class="du-co">
-	<div>
-		<h4>Duration</h4>
-		<h4><span style="color: #484848">10 days</span></h4>
-	</div>
-
-	<div class="complexity">
-		<h4>Complexity</h4>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star checked"></span>
-	<span class="fa fa-star"></span>
-	<span class="fa fa-star"></span>
-	</div>
-</div>
-<div>
-<p>
-	A predecessor project to object tracking and following drone.
-	I was trying to learn how to use DroneKit Python API with Raspberry Pi and
-	PixHawk flight controller and ended up making this project.
-</p>
-<p>
-	We used the Ublox NEO 7M GPS module to get our drone's precise location.
-	By taking our custom GPS coordinates and passing these location coordinates into our code we were able to make
-	our drone navigate through all set checkpoints safely.
-
-</p>
-</div>
-</div>
-
-
-
-
-<!-- main above -->
-
-<div class="video-flex">
-	<iframe id="p6"  width="1280" height="620" src="https://www.youtube.com/embed/fNhwsm97YNk?start=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-	</div>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<!-- last video end -->
-
-
-
- </div>
-</div>
-</section>
-<!-- Project section end-->
-
-
-
-
-
-
-
-
-
-
-<!-- Exprience section-->
-<section class="exprience" id="exprience">
-	<div class="section-title">
-		<h1>WORK EXPERIENCE</h1>
-
-	</div>
-	<div class="exp-block">
-		<div class="workexp">
-			<div class="wow bounceInLeft">
-			<img class="work" src="work.png" alt="Smiley face"/>
 			</div>
 		</div>
+	</section>
+	<!-- Project section end-->
 
-		<div class="text">
-			<div class="app-dev">
-			<span class="dot"></span><h1 class="hback"> Application developer, India Partnering Lab, KONE  </h1>
-			<h3><span>August 2018 – Present</span></h3>
-			<p> Notable Projects - </p>
-			<!--	<p> My core area of working was to build Proof of Concepts(POC) either internally or with KONE partners using their products or services. I got a chance to meet and interact with amazing people from startups all around the world and have built over 15 PoCs during my time here. Some of my most memorable projects were:</p> -->
-<!--<div style=" flex: 0 0 12%; min-width: 8%; max-width: 12%; "> -->
-				<div class="work-projects">
- 					 <ul>
 
-						 <li>
-							 <h3>Whatsapp Elevator Call</h3>
-									<p>Core backend developer for Whatsapp Elevator Call product. Responsible for Database design, Security, Building & User management.
-						 </p>
-				<!--		 <p>https://www.businessinsider.in/tech/news/call-the-elevator-by-a-whatsapp-message/articleshow/76160802.cms</p>
+
+
+
+
+
+
+
+
+	<!-- Exprience section-->
+	<section class="exprience" id="exprience">
+		<div class="section-title">
+			<h1>WORK EXPERIENCE</h1>
+
+		</div>
+		<div class="exp-block">
+			<div class="workexp">
+				<div class="wow bounceInLeft">
+					<img class="work" src="givep1.png" style="transform: scale(1.10, 1.10); margin-top: 44px; padding-right: 16px;" alt="Smiley face" />
+				</div>
+			</div>
+
+			<div class="text">
+				<div class="app-dev">
+					<span class="dot"></span>
+					<h1 class="hback"> Software Development Engineer ||</h1>
+					<h3><span>April 2021 – Aug 2021</span></h3>
+					<!--	<p> My core area of working was to build Proof of Concepts(POC) either internally or with KONE partners using their products or services. I got a chance to meet and interact with amazing people from startups all around the world and have built over 15 PoCs during my time here. Some of my most memorable projects were:</p> -->
+					<!--<div style=" flex: 0 0 12%; min-width: 8%; max-width: 12%; "> -->
+					<div class="work-projects">
+				
+								<p>Responsible  for the  development  of  Beneficiary  Mapping  tool(BMT)  which helped over 300  
+									NGOs to manage  beneficiaiy  inventory  & give timely  beneficimy  and  program  updates  to 
+									donors.
+								</p>
+								
+
+						
+
+					</div>
+
+
+					<div class="intern">
+						<span class="dot"></span>
+						<h1 class="hback">Software Development Engineer </h1>
+						<h3><span>Aug 2020 – Apr 2021</span></h3>
+								<p>Developing  newer  features  on Subscription  and  Crowdfunding  platforms,  while  maintaining  
+									the existing  codebase,  rolling out  patches and  fixes,  and  contributing  to  the development  
+									of  internal tools  and crons for  automating  work  flows.
+								</p>
+					
+					
+
+					</div>
+
+
+
+					<div class="Freelance">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="exp-block">
+			<div class="workexp">
+				<div class="wow bounceInLeft">
+					<img class="work" src="work.png"  style = "margin-top: 30px; padding-right: 16px;" alt="Smiley face" />
+				</div>
+			</div>
+
+			<div class="text">
+				<div class="app-dev">
+					<span class="dot"></span>
+					<h1 class="hback"> Application developer, India Partnering Lab, KONE </h1>
+					<h3><span>Aug 2018 – Aug 2020</span></h3>
+					<p> Notable Projects - </p>
+					<!--	<p> My core area of working was to build Proof of Concepts(POC) either internally or with KONE partners using their products or services. I got a chance to meet and interact with amazing people from startups all around the world and have built over 15 PoCs during my time here. Some of my most memorable projects were:</p> -->
+					<!--<div style=" flex: 0 0 12%; min-width: 8%; max-width: 12%; "> -->
+					<div class="work-projects">
+						<ul>
+
+							<li>
+								<h3>Whatsapp Elevator Call</h3>
+								<p>Core backend developer for Whatsapp Elevator Call product. Responsible for Database
+									design, Security, Building & User management.
+								</p>
+								<!--		 <p>https://www.businessinsider.in/tech/news/call-the-elevator-by-a-whatsapp-message/articleshow/76160802.cms</p>
 						 <p>https://www.kauppalehti.fi/uutiset/kone-on-luonut-intian-markkinoille-koronaa-ehkaisevia-ratkaisuja-hissin-voi-kutsua-whatsappilla/2750bdbe-874d-4a2b-8b6f-f1c372cd1478</p>
 						 <p>https://www.businessinsider.in/tech/news/call-the-elevator-by-a-whatsapp-message/articleshow/76160802.cms?utm_source=copy-link&utm_medium=referral&utm_campaign=Click_through_social_share</p> -->
 
-						 <div class="businessinsider" onClick="window.open('https://www.businessinsider.in/tech/news/call-the-elevator-by-a-whatsapp-message/articleshow/76160802.cms','_blank');" style=" word-wrap: break-word; border-radius: 14px; border: 1px solid #cccb67; cursor: pointer; background-color: rgba(250,250,250,1); padding: 8px; display: flex; width :70%; ">
-							 <img style=" flex: 0 0 11%; min-width: 110px; max-width: 11%; max-height : 110px"  class="_3k4oG" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANv/bAEMABgQFBgUEBgYFBgcHBggKEAoKCQkKFA4PDBAXFBgYFxQWFhodJR8aGyMcFhYgLCAjJicpKikZHy0wLSgwJSgpKP/bAEMBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/AABEIAHgAeAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcBAgj/xAA6EAABAwMDAgMFBQcEAwAAAAABAAIDBAURBhIhB0ETMWEUIjJRcSN1gZGhFRY3QrGz0TM2UlPC4fD/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIDBAUG/8QAKREAAgIBAgUDBAMAAAAAAAAAAAECEQMSITFBUaHBE4HRIjKx8GGR8f/aAAwDAQACEQMRAD8A52iIvvH5UIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA6Np+2aaoumzdQX21VFwnfcTRhsVS6LA2bgeOOx/NaOurBaKbTtj1BYo6qkp7kZGGjqn73MLDjc092n/CuugP3mPSFv7mN3XH9rO3jER+z8MZ/wBTjz2+qi+rXtj9IWR+rXwfva2Z7CyJzdwp8E5eGe6DnbjH+V5FJ+pV8+vg90oL0rrkuXnwVi8WKgpumFgvUMbhcKuqmileXkgtaXAceQ8glBYqCbpVc75JG43GC4Mp2P3nAYWtJGPLuVYbZbp9ZdJrfarGY5rtaqySSSkMjWvfG/cdzckZ+L9CvL9QS6Q6Svsl5dHFeLjcBUilbIHOjja0Dc7BIHLf19Ct639t732M+mvurbT3r82Rug9O2ufSd21FdqCru/sczYW0FNIWeYBL3kcgc9vkfwr+qarTlZHSy6dt1XbZsuFRBLP4zAONpY48/wDLOfRTPTm26uMNRc9FVH20b/DmgjmYHkYBDix/Dm8n585U71cicdNWWq1DSUVHq6SV4qI6baHPh5w54aSM5x+v0FuslN37+CaLxWlXtx36+Ct0dioJelFffHxuNxiuTaZj95wGFjTjHl5k8rL030bFrGmvcRqRTVdNFHJTyPOGbiSNrvQ8c9v0W/bv4C3T76b/AG2L56ZcaS1593N/q5RyemVPn8EjGOuKa2r5I/RmlDJ1KodPalpJIwXvbNCXFpOI3OBBHbgHI81F2K2U1Xryhtc7CaOW4sp3NDiCWGTaRnz8l0Xpfri33G72in1fj9o0Li2gubjhxBaW+FKe497gnv8AmaPpb+Klr+94/wC8FVKVu+nyHCCUdO9v44li1TDo+0XC6W+PSdzc+lfJE2p9sfsyMgOxjy7qv9L9OUmptRyU1wMxp6emkqjDAQJJ9uMMb6nP6fiuja+oOptVXX1lP4ztPyOlDW+LAAYOexO74fxXKtEWy7XO+BmnqltPdIYzNCfG8JzyCBtaTxnB8j2BUxu8b372ayxrKk47dKr/AEktR1mk5rfVwUWnbhZbtEWiLdVOla73huEgfy07c+XdbfTvTltuFjvt7ulHVXNttEYZb6V5a6QuJy5xHIAxnj5H5K53+O9VGgLy/qXSUcVXAxottS7wxUPlz8I2HkeWfTPn5ihdO7bqmd9TX6MqdtZTlrZIWTNa97Tk52u4c3jv6IncHTr38hwrIrV7cKp/0aGqKvTVZTQvsNqq7XVteRNBJUGaMtxwQ4+9nPzRXjqnHPJoq3VeraSio9XOqy0CDaJJafafekDSR54/9ZKLrialH9ZxzwcZb/iuxyUPcBgOIHoUax7w5zWucG8uIGcfVfK6N0w/2hr77tH/AJKylpVmMcNctJzuNz2O3xuc1zedzTghHF8smXFz3uPmeSSr70Pp6er10yCshZPTSUs7ZI3jIcNnIIW5LpOmbdrNqPScj6vT8tbDvYeZaJ+9vuSD5fI/T0JjypS0s6RwuUdSOcAy08vG+KRv1aQsns9VNE6p8GeSL+aXaSPxKtPVcsb1NvZkaXMFSC5oOMja3IXULzV6nukzLl01vVHUWaKFgjtcHhtkgAaAWujcOec+vOB2WZZaSdcTUcKbkr4dD8/gk+6M8nyXr2vicWPDmO7tIwVJUj5ZNTwvqI/CmdWNL49u3a7fyMdsHsrL1t/ihe/rF/ZYumr6lE5aPocv5opgpagtDhBKWkZBDDjCxZIOe67JrrWF+03ZtGQWS4PpYpLLTyPaI2OBdtAz7wKhdZvj1R06oNWVFPDDeI600FXJEwMFQNpcHkD+by/M+gHOORum1szpLDFWk90c8jjqpWbo2TPae7QSFikjkhcBIxzHeYDhgruGk5LxH0hsxsN9t9mmNZNvlrZmxte3J90FzTk55XL9fVN0qdQOF8utJdqqKNrBU0r2vjLfiABAAONx7KwyapNEyYlCKl1/epCGOrqQJCyeUeQcQXfqsLXPiflpcx7T5jghd009Hq2TpHpcaJe5tR4tT4+18Tct8V+Pj9fkqr1qcwu0+2ukpJNSNpXC6Op9vxZGzdt43fFn/GFI5blprr2NTwaYa76dzmsj3SPLpHFzj5knJKL5RdzzhXDRN/obPp/VVHWGQTXGjEEG1uQXe95/LzVPRc5RUlTLCbg7Rbul1+otN6sjuFyMgp2wSRnw27jlzcDhaWitWXHSN1bWW926J2Gz07z7kzfkfX5Ht+YVeRVwTu+ZpZJJKuRPa0vFPftXV91hje2nqZGyeG/4gMDI4+hVus1ToC0XmlvlDc79G+mkEzKEwt3kjnYXg429j8wueUNHJWySMiLQY4nyncezRk/istLa6mqt1VWwhroqYgSDPvYPfHyUeO0o2VZtMnJpWblxvDbjrCe8yx+Cyet9pcxvO0F+7HqtzqVeaTUOtrndLcXmlqDGWF7dp4ja05H1BULLb5opqONzmbqpjZGYJ4DiQM/ktmusc9LHUObPTVHs7tszYXkuj5xyCBxnjhaUEmn0MvK2nF83ZfrxdtE6itWn23a43anqbdb4qR7KenaQS1ozyfXKr2s9UW+ts1Bp/TdLPTWSieZd1QQZZ5Tkb3Y4Hmfz+gFWfRyNt8dYS3wnyOiAzzkAE/1Cyx2upktMlxaG+zxv2Hn3u3IHy5A/FYjhSNSztp8Ny9Wu8aVr+nttsV/rbhSz0lTJPmmgDwdxOBk+hVN1LDZoK9rdO1VXVUfhgufUxhjg/JyMDtjCiUWow0u0ySyOSSaLrXaphboPS1vt008N2tdRNM57RtDNzy5pae/mFh1neLTqSkprqyN1JqF3uV0LI/sZz/2tPZx7j/41BFFjSdoryyap/tBERdDmERFkgREWiklYqmGlqKl079rX00sbeCcucwgDj1We13T9n2qQQvAqfaY5AwtJDmBrw4HtjnGPVQyJZlxsn7vX0U92tk1HuZTQxRhzXA5jw4kj1xlZayqoKea71NNWe1S1wexjGxuaGNe7JLi4DnA7KtorZNJJS1MTtPU9MH/bsqZJHNweGlrQDny7FTFPd7dCILeY91J7OYJKkF3G/lxDe+HY7Z91VVEsumz1wwSAQR8x3XiIoaCIiAIiIAiIskCIi0UIiIAiIgCIiAIiIAiIgCIiAIiLJAiItFCIiAIiIAiIgCIiAIiIAiIgP//Z" />
-							 <div style = "background: rgba(125,125,125,0.1);
+								<div class="businessinsider"
+									onClick="window.open('https://www.businessinsider.in/tech/news/call-the-elevator-by-a-whatsapp-message/articleshow/76160802.cms','_blank');"
+									style=" word-wrap: break-word; border-radius: 14px; border: 1px solid #cccb67; cursor: pointer; background-color: rgba(250,250,250,1); padding: 8px; display: flex; width :70%; ">
+									<img style=" flex: 0 0 11%; min-width: 110px; max-width: 11%; max-height : 110px"
+										class="_3k4oG"
+										src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANv/bAEMABgQFBgUEBgYFBgcHBggKEAoKCQkKFA4PDBAXFBgYFxQWFhodJR8aGyMcFhYgLCAjJicpKikZHy0wLSgwJSgpKP/bAEMBBwcHCggKEwoKEygaFhooKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKP/AABEIAHgAeAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYDBAcBAgj/xAA6EAABAwMDAgMFBQcEAwAAAAABAAIDBAURBhIhB0ETMWEUIjJRcSN1gZGhFRY3QrGz0TM2UlPC4fD/xAAaAQEBAQEBAQEAAAAAAAAAAAAAAQIDBAUG/8QAKREAAgIBAgUDBAMAAAAAAAAAAAECEQMSITFBUaHBE4HRIjKx8GGR8f/aAAwDAQACEQMRAD8A52iIvvH5UIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiA6Np+2aaoumzdQX21VFwnfcTRhsVS6LA2bgeOOx/NaOurBaKbTtj1BYo6qkp7kZGGjqn73MLDjc092n/CuugP3mPSFv7mN3XH9rO3jER+z8MZ/wBTjz2+qi+rXtj9IWR+rXwfva2Z7CyJzdwp8E5eGe6DnbjH+V5FJ+pV8+vg90oL0rrkuXnwVi8WKgpumFgvUMbhcKuqmileXkgtaXAceQ8glBYqCbpVc75JG43GC4Mp2P3nAYWtJGPLuVYbZbp9ZdJrfarGY5rtaqySSSkMjWvfG/cdzckZ+L9CvL9QS6Q6Svsl5dHFeLjcBUilbIHOjja0Dc7BIHLf19Ct639t732M+mvurbT3r82Rug9O2ufSd21FdqCru/sczYW0FNIWeYBL3kcgc9vkfwr+qarTlZHSy6dt1XbZsuFRBLP4zAONpY48/wDLOfRTPTm26uMNRc9FVH20b/DmgjmYHkYBDix/Dm8n585U71cicdNWWq1DSUVHq6SV4qI6baHPh5w54aSM5x+v0FuslN37+CaLxWlXtx36+Ct0dioJelFffHxuNxiuTaZj95wGFjTjHl5k8rL030bFrGmvcRqRTVdNFHJTyPOGbiSNrvQ8c9v0W/bv4C3T76b/AG2L56ZcaS1593N/q5RyemVPn8EjGOuKa2r5I/RmlDJ1KodPalpJIwXvbNCXFpOI3OBBHbgHI81F2K2U1Xryhtc7CaOW4sp3NDiCWGTaRnz8l0Xpfri33G72in1fj9o0Li2gubjhxBaW+FKe497gnv8AmaPpb+Klr+94/wC8FVKVu+nyHCCUdO9v44li1TDo+0XC6W+PSdzc+lfJE2p9sfsyMgOxjy7qv9L9OUmptRyU1wMxp6emkqjDAQJJ9uMMb6nP6fiuja+oOptVXX1lP4ztPyOlDW+LAAYOexO74fxXKtEWy7XO+BmnqltPdIYzNCfG8JzyCBtaTxnB8j2BUxu8b372ayxrKk47dKr/AEktR1mk5rfVwUWnbhZbtEWiLdVOla73huEgfy07c+XdbfTvTltuFjvt7ulHVXNttEYZb6V5a6QuJy5xHIAxnj5H5K53+O9VGgLy/qXSUcVXAxottS7wxUPlz8I2HkeWfTPn5ihdO7bqmd9TX6MqdtZTlrZIWTNa97Tk52u4c3jv6IncHTr38hwrIrV7cKp/0aGqKvTVZTQvsNqq7XVteRNBJUGaMtxwQ4+9nPzRXjqnHPJoq3VeraSio9XOqy0CDaJJafafekDSR54/9ZKLrialH9ZxzwcZb/iuxyUPcBgOIHoUax7w5zWucG8uIGcfVfK6N0w/2hr77tH/AJKylpVmMcNctJzuNz2O3xuc1zedzTghHF8smXFz3uPmeSSr70Pp6er10yCshZPTSUs7ZI3jIcNnIIW5LpOmbdrNqPScj6vT8tbDvYeZaJ+9vuSD5fI/T0JjypS0s6RwuUdSOcAy08vG+KRv1aQsns9VNE6p8GeSL+aXaSPxKtPVcsb1NvZkaXMFSC5oOMja3IXULzV6nukzLl01vVHUWaKFgjtcHhtkgAaAWujcOec+vOB2WZZaSdcTUcKbkr4dD8/gk+6M8nyXr2vicWPDmO7tIwVJUj5ZNTwvqI/CmdWNL49u3a7fyMdsHsrL1t/ihe/rF/ZYumr6lE5aPocv5opgpagtDhBKWkZBDDjCxZIOe67JrrWF+03ZtGQWS4PpYpLLTyPaI2OBdtAz7wKhdZvj1R06oNWVFPDDeI600FXJEwMFQNpcHkD+by/M+gHOORum1szpLDFWk90c8jjqpWbo2TPae7QSFikjkhcBIxzHeYDhgruGk5LxH0hsxsN9t9mmNZNvlrZmxte3J90FzTk55XL9fVN0qdQOF8utJdqqKNrBU0r2vjLfiABAAONx7KwyapNEyYlCKl1/epCGOrqQJCyeUeQcQXfqsLXPiflpcx7T5jghd009Hq2TpHpcaJe5tR4tT4+18Tct8V+Pj9fkqr1qcwu0+2ukpJNSNpXC6Op9vxZGzdt43fFn/GFI5blprr2NTwaYa76dzmsj3SPLpHFzj5knJKL5RdzzhXDRN/obPp/VVHWGQTXGjEEG1uQXe95/LzVPRc5RUlTLCbg7Rbul1+otN6sjuFyMgp2wSRnw27jlzcDhaWitWXHSN1bWW926J2Gz07z7kzfkfX5Ht+YVeRVwTu+ZpZJJKuRPa0vFPftXV91hje2nqZGyeG/4gMDI4+hVus1ToC0XmlvlDc79G+mkEzKEwt3kjnYXg429j8wueUNHJWySMiLQY4nyncezRk/istLa6mqt1VWwhroqYgSDPvYPfHyUeO0o2VZtMnJpWblxvDbjrCe8yx+Cyet9pcxvO0F+7HqtzqVeaTUOtrndLcXmlqDGWF7dp4ja05H1BULLb5opqONzmbqpjZGYJ4DiQM/ktmusc9LHUObPTVHs7tszYXkuj5xyCBxnjhaUEmn0MvK2nF83ZfrxdtE6itWn23a43anqbdb4qR7KenaQS1ozyfXKr2s9UW+ts1Bp/TdLPTWSieZd1QQZZ5Tkb3Y4Hmfz+gFWfRyNt8dYS3wnyOiAzzkAE/1Cyx2upktMlxaG+zxv2Hn3u3IHy5A/FYjhSNSztp8Ny9Wu8aVr+nttsV/rbhSz0lTJPmmgDwdxOBk+hVN1LDZoK9rdO1VXVUfhgufUxhjg/JyMDtjCiUWow0u0ySyOSSaLrXaphboPS1vt008N2tdRNM57RtDNzy5pae/mFh1neLTqSkprqyN1JqF3uV0LI/sZz/2tPZx7j/41BFFjSdoryyap/tBERdDmERFkgREWiklYqmGlqKl079rX00sbeCcucwgDj1We13T9n2qQQvAqfaY5AwtJDmBrw4HtjnGPVQyJZlxsn7vX0U92tk1HuZTQxRhzXA5jw4kj1xlZayqoKea71NNWe1S1wexjGxuaGNe7JLi4DnA7KtorZNJJS1MTtPU9MH/bsqZJHNweGlrQDny7FTFPd7dCILeY91J7OYJKkF3G/lxDe+HY7Z91VVEsumz1wwSAQR8x3XiIoaCIiAIiIAiIskCIi0UIiIAiIgCIiAIiIAiIgCIiAIiLJAiItFCIiAIiIAiIgCIiAIiIAiIgP//Z" />
+									<div style="background: rgba(125,125,125,0.1);
     			 				border-radius: 0px 14px 14px 0px; max-height: 110px">
-								<div class="_151kh" style="flex: 0 0 70%; max-width: 100%; padding-left : 12px; padding-top: 6px ">
-								<div class="_2mpex"><div style="padding-right : 5px;" class="p1" dir="auto" title="Chennai, June 2 (IANS) Can you call an elevator to go to a particular floor with a WhatsApp message?">Chennai, June 2 (IANS) Can you call an elevator to go to a particular floor with a WhatsApp message?</div></div>
-								<div class="NW966">
-									<div class="p1" title="Call the elevator by a WhatsApp message">Call the elevator by a WhatsApp message</div>
-									<div  style = "color : rgba(50,50,255,1);" class="p1" dir="auto">www.businessinsider.in</div></div>
-								</div>
-						   	</div>
+										<div class="_151kh"
+											style="flex: 0 0 70%; max-width: 100%; padding-left : 12px; padding-top: 6px ">
+											<div class="_2mpex">
+												<div style="padding-right : 5px;" class="p1" dir="auto"
+													title="Chennai, June 2 (IANS) Can you call an elevator to go to a particular floor with a WhatsApp message?">
+													Chennai, June 2 (IANS) Can you call an elevator to go to a
+													particular floor with a WhatsApp message?</div>
+											</div>
+											<div class="NW966">
+												<div class="p1" title="Call the elevator by a WhatsApp message">Call the
+													elevator by a WhatsApp message</div>
+												<div style="color : rgba(50,50,255,1);" class="p1" dir="auto">
+													www.businessinsider.in</div>
+											</div>
+										</div>
+									</div>
 								</div>
 
 							</li>
 
-    					<li>
-    					  <h3>Social Media integration with elevators</h3>
-     						 <p>Created backend services to connect whatsapp, wechat and facebook messenger with kone elevators.
-							</p>
-   						 </li>
+							<li>
+								<h3>Social Media integration with elevators</h3>
+								<p>Created backend services to connect whatsapp, wechat and facebook messenger with kone
+									elevators.
+								</p>
+							</li>
 
-							 <li>
-									 <h3>Smart Viewer App</h3>
-									<!-- <p>Created a mobile application which scans machine nameplates (using google vision API) and redirects to Relevant machine document.</p> -->
-									<p>Streamlined the job of Kone's maintenance technicians by building an application that scans equipment nameplates/barcodes, retrieves information, adds equipment to cart, and places orders. On average saved 2 manhours when compared to the existing process. Reduced downtime of the elevators and completely eliminated of wrong delivery of equipment.</p>
-								</li>
+							<li>
+								<h3>Smart Viewer App</h3>
+								<!-- <p>Created a mobile application which scans machine nameplates (using google vision API) and redirects to Relevant machine document.</p> -->
+								<p>Streamlined the job of Kone's maintenance technicians by building an application that
+									scans equipment nameplates/barcodes, retrieves information, adds equipment to cart,
+									and places orders. On average saved 2 manhours when compared to the existing
+									process. Reduced downtime of the elevators and completely eliminated of wrong
+									delivery of equipment.</p>
+							</li>
 
-    						<li>
-     						 <h3>Voice assistant integration</h3>
-     						 <p>Built a backend service to integrate google assistant and Amazon voice services with kone elevators.</p>
-    						</li>
+							<li>
+								<h3>Voice assistant integration</h3>
+								<p>Built a backend service to integrate google assistant and Amazon voice services with
+									kone elevators.</p>
+							</li>
 
-    						<li>
-     						 <h3>QR user management system</h3>
-    						  <p>A Kone mobile extension application which registers the user in the database upon QR scan and links KONE apps with the particular building.</p>
-    							</li>
-
-
- 						 </ul>
-			</div>
-
-
-			<div class="intern">
-			<span class="dot"></span><h1 class="hback">Intern, India Partnering Lab, KONE  </h1>
-			<h3><span>jan 2018 – july 2018</span></h3>
-			<!-- <p> I got internship in the final year of my college at KONE, with India Partnering Lab where my journey as an application developer began.</p> -->
-			<p> Notable Projects - </p>
-			<ul>
-    					<li>
-    					  <h3>ResiFlow Lite</h3>
-     						 <p>Built an app which detects the user's walking direction using Kontakt's low energy beacons and calls the elevator.
-							</p>
-   						 </li>
-
-    						<li>
-     						 <h3>Philips Light integration</h3>
-     						 <p>Built a backend service to connect Philips lights in lobby with Kone elevators.</p>
-    						</li>
+							<li>
+								<h3>QR user management system</h3>
+								<p>A Kone mobile extension application which registers the user in the database upon QR
+									scan and links KONE apps with the particular building.</p>
+							</li>
 
 
- 						 </ul>
-
-			</div>
-
+						</ul>
+					</div>
 
 
-			<div class="Freelance">
+					<div class="intern">
+						<span class="dot"></span>
+						<h1 class="hback">Intern, India Partnering Lab, KONE </h1>
+						<h3><span>jan 2018 – july 2018</span></h3>
+						<!-- <p> I got internship in the final year of my college at KONE, with India Partnering Lab where my journey as an application developer began.</p> -->
+						<p> Notable Projects - </p>
+						<ul>
+							<li>
+								<h3>ResiFlow Lite</h3>
+								<p>Built an app which detects the user's walking direction using Kontakt's low energy
+									beacons and calls the elevator.
+								</p>
+							</li>
 
-			</div>
-		  </div>
-		</div>
-	</div>
-</section>
-<!-- Exprience section end-->
+							<li>
+								<h3>Philips Light integration</h3>
+								<p>Built a backend service to connect Philips lights in lobby with Kone elevators.</p>
+							</li>
+
+
+						</ul>
+
+					</div>
 
 
 
+					<div class="Freelance">
 
-<!-- start contact us -->
-<section class="contact-us" id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="section-title">
-				<div class="git-cen">
-				<h1 class="getintouch">GET IN TOUCH</h1>
-			</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="contact-form">
-				<div class="row">
-					<div class="text">
-						<h1>Drop me a line</h1>
-						<p>I am here to answer any questions you have.</p>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Exprience section end-->
 
 
 
-<!--
+
+	<!-- start contact us -->
+	<section class="contact-us" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<div class="git-cen">
+						<h1 class="getintouch">GET IN TOUCH</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="contact-form">
+					<div class="row">
+						<div class="text">
+							<h1>Drop me a line</h1>
+							<p>I am here to answer any questions you have.</p>
+						</div>
+					</div>
+
+
+
+					<!--
 
 <form id="my-form"
   action="https://formspree.io/mlegbywj"
@@ -1409,50 +1536,47 @@ name="_replyto"
 
 
 
-<form
-id="my-form"
-  action="https://formspree.io/mlegbywj"
-  method="POST"
->
+					<form id="my-form" action="https://formspree.io/mlegbywj" method="POST">
 
 
 
-<div class="form-container">
-<div class="row space-between">
-					<div class="col-6">
-						<input class="form-control" id="email"  name="email" type="email" value=""
-               required placeholder="Email">
-					</div>
-					<div class="col-6">
-						<input class="form-control" id="name" name="name" placeholder="Your Name" >
-					</div>
-				</div>
+						<div class="form-container">
+							<div class="row space-between">
+								<div class="col-6">
+									<input class="form-control" id="email" name="email" type="email" value="" required
+										placeholder="Email">
+								</div>
+								<div class="col-6">
+									<input class="form-control" id="name" name="name" placeholder="Your Name">
+								</div>
+							</div>
 
-				<div class="row">
-					<div class="col-12">
-						<textarea class="form-control" id="message" name="message" rows="10"
-                  placeholder="Message"  style="margin: 0px 0px 15px;
+							<div class="row">
+								<div class="col-12">
+									<textarea class="form-control" id="message" name="message" rows="10"
+										placeholder="Message" style="margin: 0px 0px 15px;
     width: 95%;
     height: 142px;"></textarea>
-					</div>
-				</div>
-			</div>
+								</div>
+							</div>
+						</div>
 
 
-<div class="row">
-					<div  class="button text-right">
-  <button type="submit" id="my-form-button"  class="send-button">Get In Touch</button>
-  <p id="my-form-status" style="font-size: 26px; color: #febd01; font-weight: 600; text-align: center;"></p>
-</div>
-</div>
+						<div class="row">
+							<div class="button text-right">
+								<button type="submit" id="my-form-button" class="send-button">Get In Touch</button>
+								<p id="my-form-status"
+									style="font-size: 26px; color: #febd01; font-weight: 600; text-align: center;"></p>
+							</div>
+						</div>
 
-</form>
-
-
-
+					</form>
 
 
-<!--
+
+
+
+					<!--
   <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="from_email@example.com"
           action="https://formspree.io/mlegbywj">
 
@@ -1490,108 +1614,111 @@ id="my-form"
 
 -->
 
+				</div>
+			</div>
+
+	</section>
+	<!-- end contact us -->
+
+
+	<!-- start footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="logo">
+					Karthik
+				</div>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i
+							class="fa fa-linkedin"></i></a>
+					<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
+					<a href="https://leetcode.com/karthiksingh/" target="_blank"><i class="fa fa-leetcode"><span
+								class="iconify" data-icon="simple-icons:leetcode" data-inline="false"></span></i></a>
+
+				</div>
+			</div>
 		</div>
-	</div>
-
-</section>
-<!-- end contact us -->
-
-
-<!-- start footer -->
-<footer>
-<div class="container">
-	<div class="row">
-		<div class="logo">
-			Karthik
-		</div>
-		<div class="social-links">
-			<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
-			<a href="https://leetcode.com/karthiksingh/" target="_blank"><i class="fa fa-leetcode"><span class="iconify" data-icon="simple-icons:leetcode" data-inline="false"></span></i></a>
+	</footer>
+	<!-- end footer -->
+	<section class="copyright">
+		<div>
+			<p class="">&copy; Karthik Singh, 2019</p>
 
 		</div>
-	</div>
-</div>
-</footer>
-<!-- end footer -->
-<section class="copyright">
-	<div>
-		<p class="">&copy; Karthik Singh, 2019</p>
-
-	</div>
-</section>
+	</section>
 
 
-<section id="banner">
+	<section id="banner">
 
-</section>
+	</section>
 
 
-<script type="text/javascript">
-	/*
-var preloader = document.getElementById('loading');
-function loadFunction(){
-	preloader.style.display = 'none';
-}
-*/
+	<script type="text/javascript">
+		/*
+	var preloader = document.getElementById('loading');
+	function loadFunction(){
+		preloader.style.display = 'none';
+	}
+	*/
 
-</script>
+	</script>
 
-<script src="wow.min.js"></script>
-              <script>
+	<script src="wow.min.js"></script>
+	<script>
 
-             new WOW().init();
-              </script>
+		new WOW().init();
+	</script>
 
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
+	<script>
+		window.addEventListener("DOMContentLoaded", function () {
 
-    // get the form elements defined in your form HTML above
+			// get the form elements defined in your form HTML above
 
-    var form = document.getElementById("my-form");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
+			var form = document.getElementById("my-form");
+			var button = document.getElementById("my-form-button");
+			var status = document.getElementById("my-form-status");
 
-    // Success and Error functions for after the form is submitted
+			// Success and Error functions for after the form is submitted
 
-    function success() {
-      form.reset();
-      button.style = "display: none ";
-      status.innerHTML = "Message Sent!";
-    }
+			function success() {
+				form.reset();
+				button.style = "display: none ";
+				status.innerHTML = "Message Sent!";
+			}
 
-    function error() {
-      status.innerHTML = "Oops! There was a problem.";
-    }
+			function error() {
+				status.innerHTML = "Oops! There was a problem.";
+			}
 
-    // handle the form submission event
+			// handle the form submission event
 
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
+			form.addEventListener("submit", function (ev) {
+				ev.preventDefault();
+				var data = new FormData(form);
+				ajax(form.method, form.action, data, success, error);
+			});
+		});
 
-  // helper function for sending an AJAX request
+		// helper function for sending an AJAX request
 
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }
-</script>
+		function ajax(method, url, data, success, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open(method, url);
+			xhr.setRequestHeader("Accept", "application/json");
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState !== XMLHttpRequest.DONE) return;
+				if (xhr.status === 200) {
+					success(xhr.response, xhr.responseType);
+				} else {
+					error(xhr.status, xhr.response, xhr.responseType);
+				}
+			};
+			xhr.send(data);
+		}
+	</script>
 
 </body>
+
 </html>
 
 

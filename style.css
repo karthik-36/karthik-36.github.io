@@ -1722,6 +1722,14 @@ display: none;
 
 
 
+@media(min-width: 2050px){
+
+.projects .videos iframe{
+	width: 85%;
+	height: 800px;
+	}
+}
+
 
 
 
